@@ -1,0 +1,61 @@
+.main {
+  margin-bottom: 250px;
+}
+
+.footer {
+  z-index: 0;
+  width: 100%;
+  visibility: hidden;
+  bottom: 0;
+  position: fixed;
+  background: $gray-900;
+  color: $light;
+  font-size: 1rem;
+  font-weight: 600;
+  padding-top: $spacer * 16;
+  padding-bottom: $spacer * 5;
+  @include clip();
+
+  &.visible {
+    z-index: 500;
+    visibility: visible;
+  }
+
+  &__social {
+    float: right;
+    margin-top: -3rem;
+  }
+
+  &__contact {
+    width: 100%;
+    clear:both;
+    text-align: center;
+  }
+
+  &__copyright {
+    margin-top: .5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__menu {
+    width: 100%;
+    text-align: center;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      display: inline;
+
+      + li {
+        margin-left: 2rem;
+      }
+    }
+  }
+
+}

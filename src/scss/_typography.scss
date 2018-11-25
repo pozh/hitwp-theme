@@ -1,0 +1,10 @@
+p {
+  margin-bottom: 1.15em;
+}
+
+
+.list-spread {
+  li + li {
+    margin-top: .7rem;
+  }
+}
