@@ -46,10 +46,8 @@ $(document).ready(function() {
     // navigation bar
     if (scrollPos > heroHeight * .6) {
       $nav.addClass('nav_alt');
-      $footer.addClass('visible');
     } else {
       $nav.removeClass('nav_alt');
-      $footer.removeClass('visible');
     }
     if (-30 > scrollDelta && scrollPos > heroHeight + 100) {
       $('#nav').addClass('nav_delta');
@@ -57,17 +55,17 @@ $(document).ready(function() {
       $('#nav').removeClass('nav_delta');
     }
 
-    // TODO: Testing parallax. Remove the line when done
-    return;
 
-    if (scrollPos > heroHeight + 140) {
+    if (scrollPos > heroHeight + 100) {
+      $footer.addClass('visible');
       return;
+    } else {
+      $footer.removeClass('visible');
     }
 
     // hero effects
     let offset = ( heroHeight - window.scrollY ) / heroHeight;
-    $hero.css('margin-top', ((1 - offset) * 50 - 50) + 'px');
-    $heroContent.css('transform', 'scale(' + ( 1 - ( 1 - offset ) / 3 ) + ')' + ' translate(' + ( 1 - offset ) * 20 + 'px, -' + ( 1 - offset ) * 100 + 'px)');
+    $heroContent.css('transform', 'scale(' + ( 1 - ( 1 - offset ) / 3 ) + ')' + ' translate(' + ( offset - 1 ) * 40 + 'px, -' + ( 1 - offset ) * 100 + 'px)');
     $heroGreeting.css('filter', 'blur(' + ( ( 1 - offset ) * 10 ) + 'px)');
     $heroContent.css('opacity', offset * offset);
     $heroIntro.css('filter', 'blur(' + ( ( 1 - offset ) * 3 ) + 'px)');

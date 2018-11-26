@@ -82,11 +82,12 @@
   &_alt {
 
     .nav__main {
-      margin-top: -60px;
+      transform: translate(-10px, -140px);
+      opacity: 0;
     }
 
     .logo {
-      top: -100px
+      transform: translate(10px, -100px);
     }
 
     @include media-breakpoint-down(xs) {

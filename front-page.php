@@ -14,11 +14,11 @@
 
 get_header(); ?>
     <header class="hero" id="scene" data-selector=".scene-child">
-        <div class="hero__bg"><div data-depth="0.2" class="scene-child"> </div></div>
+        <div class="hero__bg"><div data-depth="0.3" class="scene-child"> </div></div>
         <div class="hero__wrapper" id="hero-content">
-            <h1 data-depth="0.3" class="hero__caption" id="js-greeting"
+            <h1 class="hero__caption" id="js-greeting"
                 style="filter: blur(0px);">WordPress<br>Solutions</h1>
-            <h2 data-depth="0.4" class="hero__intro" id="hero-intro"
+            <h2 class="hero__intro" id="hero-intro"
                 style="filter: blur(0px); transform: translate(0px, 0px);">
                 Websites, Online Stores, Membership Sites, Custom Plugins. Nicely designed and built using WordPress.
             </h2>

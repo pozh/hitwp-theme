@@ -15,27 +15,18 @@
   color: $white;
   background: $white;
 
-  &:after {
-    content: '';
-    background: $white;
-    opacity: .85;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-
   &__bg {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
+    opacity: .15;
 
     div {
       width: 100%;
       height: 100%;
-      background: $white url(../images/hero1.jpg) no-repeat;
-      background-size: cover;
+      background: $white url(../images/hero3.jpg) no-repeat top right;
+      background-size: 55% auto;
     }
   }
 
@@ -56,7 +47,7 @@
     text-transform: uppercase;
     color: $black;
     position: relative;
-    padding-top: 100px;
+    margin-top: 105px;
 
     &:after {
       content: '';
