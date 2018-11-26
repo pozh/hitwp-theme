@@ -65,11 +65,11 @@ $(document).ready(function() {
 
     // hero effects
     let offset = ( heroHeight - window.scrollY ) / heroHeight;
-    $heroContent.css('transform', 'scale(' + ( 1 - ( 1 - offset ) / 3 ) + ')' + ' translate(' + ( offset - 1 ) * 40 + 'px, -' + ( 1 - offset ) * 100 + 'px)');
+    $heroContent.css('transform', 'scale(' + ( 1 - ( 1 - offset ) / 3 ) + ')' + ' translate(' + ( offset - 1 ) * 20 + 'px, -' + ( 1 - offset ) * 100 + 'px)');
     $heroGreeting.css('filter', 'blur(' + ( ( 1 - offset ) * 10 ) + 'px)');
     $heroContent.css('opacity', offset * offset);
     $heroIntro.css('filter', 'blur(' + ( ( 1 - offset ) * 3 ) + 'px)');
-    $heroIntro.css('transform', 'translate(0, -' + ( 1 - (offset * offset) ) * 50 + 'px)');
+    $heroIntro.css('transform', 'translate(0, -' + ( 1 - (offset) ) * 20 + 'px)');
   });
 
   // Navigation animation
