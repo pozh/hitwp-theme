@@ -1,20 +1,16 @@
 // About Widget
 
 .side-about {
-  .side-about__photo {
+  .elementor-image-box-img {
     border-radius: 50%;
-    width: 110px;
-    float: left;
-    margin-right: 20px;
     border: 5px solid rgba(0,0,0,.1);
+    overflow: hidden;
   }
 
   h3 {
     color: $gray-500;
-    font-size: 1.2rem;
     font-weight: 400;
     padding-top: 9px;
-    margin-bottom: 5px;
 
     //@include clearfix;
 
