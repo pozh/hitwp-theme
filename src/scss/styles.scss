@@ -1,4 +1,5 @@
 @import "myvariables";
+
 // From Bootstrap
 @import "mixins";
 @import "functions";
@@ -6,8 +7,6 @@
 @import "reboot";
 @import "bootstrap-grid";
 @import "utilities";
-@import "carousel";
-@import "card";
 @import "type";
 
 @import "mymixins";
@@ -56,7 +55,6 @@ img {
     font-size: 1rem;
     letter-spacing: 2.5px;
     font-weight: 600;
-    // opacity: .4;
     color: theme-color("primary");
     margin: 0;
   }
@@ -82,7 +80,6 @@ img {
     }
   }
 }
-
 
 
 .about {
@@ -354,99 +351,6 @@ img {
   }
 }
 
-// SECTION: TESTIMONIALS
-// ------------------------------------------
-.testimonials {
-  background: $gray-100;
-  @include angle(before, true);
-}
-
-.testimonial {
-
-  & + & {
-    margin-top: 3rem;
-    @include media-breakpoint-up(sm) {
-      margin-top: 5rem;
-    }
-
-  }
-
-  &__text-container {
-    background: $white;
-    font-size: .95rem;
-    border-radius: 5px;
-    @include angle(both, true);
-    &:before,
-    &:after {
-      box-shadow: none;
-    }
-  }
-
-  &__text {
-    position: relative;
-    font-style: italic;
-    padding: 3rem 2rem 4rem 2rem;
-
-    @include media-breakpoint-up(sm) {
-      padding: 3rem 8rem 4rem 8rem;
-    }
-
-    &:before,
-    &:after {
-      display: none;
-      content: '\201C';
-      position: absolute;
-      top: 5px;
-      left: -15px;
-      font-family: Georgia, "Times new roman", serif;
-      color: $gray-300;
-      font-size: 11rem;
-      line-height: 1em;
-      width: 10rem;
-      text-align: center;
-
-      @include media-breakpoint-up(sm) {
-        display: block;
-      }
-    }
-
-    &:after {
-      content: '\201D';
-      left: auto;
-      right: 20px;
-      top: auto;
-      bottom: -74px;
-    }
-  }
-
-  &__avatar {
-    position: relative;
-    z-index: 1111;
-    margin: -1rem auto 7px auto;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  &__name {
-    text-align: center;
-    margin: 0;
-  }
-
-  &__info {
-    text-align: center;
-    font-weight: bold;
-    font-size: .9rem;
-    margin: 0;
-  }
-
-}
 
 // SECTION: CONTACT
 // ------------------------------------------

@@ -3,6 +3,8 @@
 .hero {
   position: fixed;
   width: 120%;
+  padding: 0 10%;
+  box-sizing: border-box;
   left: -10%;
   height: 500px;
   z-index: 100;
@@ -25,8 +27,8 @@
     div {
       width: 100%;
       height: 100%;
-      background: $white url(../images/hero3.jpg) no-repeat top right;
-      background-size: 55% auto;
+      background: $white url(../images/hero3.jpg) no-repeat right 20%;
+      background-size: 65% auto;
     }
   }
 
