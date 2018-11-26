@@ -15,6 +15,13 @@ img {
   margin-bottom: 250px;
 }
 
+.side {
+  margin-top: $spacer * 2;
+
+  @include media-breakpoint-up(sm) {
+    margin-top: 0;
+  }
+}
 
 .section, .elementor-section-wrap {
   @include clip(true);
@@ -23,7 +30,7 @@ img {
   position: relative;
 
   @include media-breakpoint-down(xs) {
-    padding: $section-padding / 2 - 20px 0 $section-padding / 2 + 30px 0;
+    padding: $section-padding / 1.5 0 $section-padding / 2 + 30px 0;
   }
 
   &:last-child {
