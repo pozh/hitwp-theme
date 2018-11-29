@@ -19,3 +19,9 @@ register_nav_menus( array(
 	'footer' => esc_html__( 'Footer', 'hitwp' ),
 ) );
 
+// Enable SVG upload
+function hitwp_cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter('upload_mimes', 'hitwp_cc_mime_types');
