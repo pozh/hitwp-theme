@@ -1,0 +1,21 @@
+// Services
+
+.services-image,
+.services-image_mirror{
+  .elementor-column-wrap {
+    position: relative;
+    &:after {
+      content: ' ';
+      position: absolute;
+      width: 101%;
+      height: 101%;
+      top: -1px;
+      left:-2px;
+      background: url(../images/mask.svg) no-repeat;
+      background-size: cover;
+    }
+  }
+}
+.services-image_mirror .elementor-column-wrap:after {
+  background: url(../images/mask-mirror.svg) no-repeat;
+}
