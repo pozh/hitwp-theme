@@ -97,15 +97,16 @@
   }
 }
 
+
+
 .nav__main {
-  .menu-item a,
-  .current-menu-item a {
+  a {
     position: relative;
     color: $gray-700;
 
     &:after {
       content: '';
-      background: lighten($primary, 5%);
+      background: $primary;
       position: absolute;
       width: 0%;
       height: 4px;
@@ -134,5 +135,19 @@
       width: 114%;
       left: -5%;
     }
+  }
+}
+
+.nav_dark .nav__main {
+  a {
+    color: rgba($white, .8);
+
+    &:hover, &:active, &:focus {
+      color: $white;
+    }
+  }
+
+  .current-menu-item a {
+    color: $white;
   }
 }

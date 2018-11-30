@@ -13,15 +13,15 @@
  */
 
 get_header(); ?>
-    <header class="hero hero-home" id="scene" data-selector=".scene-child">
-        <div class="hero__bg"><div data-depth="0.3" class="scene-child"> </div></div>
-        <div class="hero__wrapper" id="hero-content">
-            <h1 class="hero__caption hero__caption-home" id="js-greeting"
-                style="filter: blur(0px);">WordPress<br>Solutions</h1>
-            <h2 class="hero__intro" id="hero-intro"
-                style="filter: blur(0px); transform: translate(0px, 0px);">
+    <header class="hero hero_home js-hero-home" id="scene" data-selector=".scene-child">
+        <div class="hero__bg"><div data-depth="0.1" class="scene-child"> </div></div>
+        <div class="container position-relative">
+        <div class="hero__wrapper scene-child js-hero-content" data-depth="0.4">
+            <h1 class="hero__title hero__title_home js-hero-title">WordPress<br>Solutions</h1>
+            <h2 class="hero__caption js-hero-caption">
                 Websites, Online Stores, Membership Sites, Custom Plugins. Nicely designed and built using WordPress.
             </h2>
+        </div>
         </div>
     </header>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); the_content(); endwhile; endif; ?>

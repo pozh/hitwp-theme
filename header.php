@@ -20,7 +20,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<nav class="nav" id="nav">
+<nav class="nav nav_dark" id="nav">
     <div class="container">
         <a href="/" class="logo"><span class="d-none">HitWP</span></a>
         <div class="nav__burger">[|]</div>

@@ -22,7 +22,7 @@
     width: 100%;
     height: 100%;
     top: 0;
-    opacity: .15;
+    filter: blur(5px);
 
     div {
       width: 100%;
@@ -33,13 +33,12 @@
   }
 
   &__wrapper {
-    @extend .container;
     text-align: left;
     position: relative;
     z-index: 200;
   }
 
-  &__caption {
+  &__title {
     opacity: .9;
     font-size: calc(1rem + 3.2vw);
     font-family: Montserrat, Helvetica, Arial, sans-serif;
@@ -52,11 +51,11 @@
     text-transform: uppercase;
 
 
-    &-home {
+    &_home {
       font-size: calc(1.3rem + 4.2vw);
       text-align: left;
       position: relative;
-      margin-top: 105px;
+      //margin-top: 0;
 
       &:after {
         content: '';
@@ -72,7 +71,7 @@
     }
   }
 
-  &__intro {
+  &__caption {
     font-family: $font-family-sans-serif;
     font-size: calc(.8rem + .4vw);
     font-weight: 600;
@@ -116,6 +115,12 @@
         fill: $white;
       }
 
+    }
+  }
+
+  &_home {
+    .container {
+      min-height: 21rem;
     }
   }
 }
