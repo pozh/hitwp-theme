@@ -14,7 +14,8 @@ $(document).ready(function() {
 
   const $nav = $('#nav');
   const $footer = $('.footer');
-  const $hero = $('.hero');
+  const $hero = $('.hero-home');
+  const $main = $('.elementor-inner', '.home');
   const $heroContent = $('#hero-content');
   const $heroGreeting = $('#js-greeting');
   const $heroIntro = $('#hero-intro');
@@ -23,11 +24,11 @@ $(document).ready(function() {
   $('body').addClass('loaded');
   $hero.css( 'height', window.innerHeight );
   $('.hero__bg').css( 'height', window.innerHeight );
-  $('.main').css('paddingTop', window.innerHeight - 140);
+  $main.css('paddingTop', window.innerHeight - 140);
 
   // Hero dimensions
   $(window).resize(() => {
-    $('.main').css('paddingTop', window.innerHeight - 140);
+    $main.css('paddingTop', window.innerHeight - 140);
   });
 
   // WHILE SCROLLING....
@@ -35,7 +36,10 @@ $(document).ready(function() {
   let scrollDelta = 0;
 
   const scene = document.getElementById('scene');
-  const parallaxInstance = new Parallax( scene );
+  let parallaxInstance = null;
+  if (null !== scene) {
+    parallaxInstance = new Parallax( scene );
+  }
 
   $(window).scroll(() => {
 
@@ -44,7 +48,8 @@ $(document).ready(function() {
     oldScrollPos = scrollPos;
 
     // navigation bar
-    if (scrollPos > heroHeight * .6) {
+    console.log(scrollPos);
+    if (200 < scrollPos) {
       $nav.addClass('nav_alt');
     } else {
       $nav.removeClass('nav_alt');
@@ -55,8 +60,7 @@ $(document).ready(function() {
       $('#nav').removeClass('nav_delta');
     }
 
-
-    if (scrollPos > heroHeight + 100) {
+    if (400 < scrollPos) {
       $footer.addClass('visible');
       return;
     } else {

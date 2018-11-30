@@ -12,20 +12,24 @@
  * @package HitWP
  */
 
+$post_id = get_the_ID();
+
 get_header(); ?>
 	<header class="hero" id="scene" data-selector=".scene-child">
 		<div class="hero__bg"><div data-depth="0.3" class="scene-child"> </div></div>
 		<div class="hero__wrapper" id="hero-content">
-			<h1 class="hero__caption" id="js-greeting"
-			    style="filter: blur(0px);">WordPress<br>Solutions</h1>
-			<h2 class="hero__intro" id="hero-intro"
-			    style="filter: blur(0px); transform: translate(0px, 0px);">
-				Websites, Online Stores, Membership Sites, Custom Plugins. Nicely designed and built using WordPress.
-			</h2>
+			<?php
+
+			$post_title = get_post_meta($post_id, 'hero-title', true);
+			if (empty($post_title)) $post_title = get_the_title($post_id);
+			$post_caption = get_post_meta($post_id, 'hero-caption', true);
+			printf( '<h1 class="hero__caption">%s</h1>', $post_title );
+			if ( !empty($post_caption))
+				printf( '<h2 class="hero__intro" id="hero-intro">%s</h2>', $post_caption );
+
+			?>
 		</div>
 	</header>
-	<article class="main">
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); the_content(); endwhile; endif; ?>
-	</article>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); the_content(); endwhile; endif; ?>
 <?php
 get_footer();
