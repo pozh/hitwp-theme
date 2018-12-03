@@ -75,7 +75,10 @@ $input-btn-border-width:    2px;
 $input-btn-padding-y-lg:    .75rem;
 $input-btn-padding-x-lg:    2rem;
 $input-btn-line-height-lg:  1.5;
-$btn-border-radius-lg:      2.5rem;
+//$btn-border-radius-lg:      .25rem;
+
+$input-bg:                  $gray-200;
+$input-border-color:        $gray-300;
 
 .h4 .elementor-heading-title {
   @extend .h4;

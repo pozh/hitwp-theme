@@ -36,6 +36,12 @@
     text-align: left;
     position: relative;
     z-index: 200;
+    transition: all .35s ease-in-out;
+
+    &.alt {
+      opacity: 0;
+      margin-left: 2rem;
+    }
   }
 
   &__title {
@@ -47,15 +53,12 @@
     letter-spacing: .03em;
     color: $black;
     margin-top: 45px;
-    //text-align: center;
     text-transform: uppercase;
-
 
     &_home {
       font-size: calc(1.3rem + 4.2vw);
       text-align: left;
       position: relative;
-      //margin-top: 0;
 
       &:after {
         content: '';
