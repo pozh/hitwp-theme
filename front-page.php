@@ -16,7 +16,7 @@ get_header(); ?>
     <header class="hero hero_home js-hero-home" id="scene" data-selector=".scene-child">
         <div class="hero__bg"><div data-depth="0.1" class="scene-child"> </div></div>
         <div class="container position-relative">
-        <div class="hero__wrapper scene-child js-hero-content" data-depth="0.4">
+        <div class="hero__wrapper js-hero-content" data-depth="0.4">
             <h1 class="hero__title hero__title_home js-hero-title">WordPress<br>Solutions</h1>
             <h2 class="hero__caption js-hero-caption">
                 Websites, Online Stores, Membership Sites, Custom Plugins. Nicely designed and built using WordPress.
