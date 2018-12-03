@@ -17,8 +17,6 @@ $(document).ready(function() {
   const $hero = $('.js-hero-home');
   const $main = $('.elementor-inner', '.home');
   const $heroContent = $('.js-hero-content');
-  const $heroTitle = $('.js-hero-title');
-  const $heroCaption = $('.js-hero-caption');
 
   $('body').addClass('loaded');
   $hero.css( 'height', window.innerHeight );
@@ -32,26 +30,26 @@ $(document).ready(function() {
     $main.css('paddingTop', window.innerHeight - 140);
   });
 
-  // WHILE SCROLLING....
-
   const scene = document.getElementById('scene');
   let parallaxInstance = null;
   if (null !== scene) {
     parallaxInstance = new Parallax( scene );
   }
 
-  $(window).scroll(() => {
+  // WHILE SCROLLING....
+  let scrollPos = 0;
 
-    let scrollPos = $(window).scrollTop();
+  $(window).scroll(() => {
+    scrollPos = $(window).scrollTop();
 
     // navigation bar
-    if (200 < scrollPos) {
+    if (300 < scrollPos) {
       $nav.addClass('nav_alt');
     } else {
       $nav.removeClass('nav_alt');
     }
 
-    if (400 < scrollPos) {
+    if (500 < scrollPos) {
       $footer.addClass('visible');
       return;
     } else {
@@ -61,12 +59,8 @@ $(document).ready(function() {
     // hero effects
     if (250 < scrollPos) {
       $heroContent.addClass('alt');
-      $heroTitle.addClass('alt');
-      $heroCaption.addClass('alt');
     } else {
       $heroContent.removeClass('alt');
-      $heroTitle.removeClass('alt');
-      $heroCaption.removeClass('alt');
     }
   });
 });
