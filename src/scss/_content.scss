@@ -1,3 +1,5 @@
+@import "forms";
+
 // Services
 
 .services-image,
@@ -18,4 +20,38 @@
 }
 .services-image_mirror .elementor-column-wrap:after {
   background: url(../images/mask-mirror.svg) no-repeat;
+}
+
+
+// Contact
+.wpcf7-form {
+  .wpcf7-text,
+  .wpcf7-textarea {
+    @extend .form-control;
+    width: 100% !important;
+    background-color: #F5F3F2;
+    border-width: 0;
+    padding-left: 1rem;
+
+    &:active,
+    &:focus {
+      box-shadow:0 0 0 .2rem rgba(0,0,0, .05);
+    }
+  }
+
+  label {
+    width: 100%;
+
+    i {
+      color: $primary;
+      font-weight: bold;
+      font-style: normal;
+    }
+  }
+}
+
+.wpcf7-submit {
+  @extend .btn;
+  @extend .btn-lg;
+  @extend .btn-primary;
 }
