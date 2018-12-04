@@ -1,7 +1,6 @@
 .footer {
-  z-index: 0;
+  z-index: 500;
   width: 100%;
-  visibility: hidden;
   bottom: 0;
   position: fixed;
   background: $gray-900 url(../images/footer2.jpg) no-repeat bottom;
@@ -11,6 +10,7 @@
   font-weight: 600;
   padding-top: 16rem;
   padding-bottom: 4rem;
+
 
   @include media-breakpoint-up(sm) {
     padding-bottom: 5rem;
@@ -113,5 +113,15 @@
 
   .container {
     text-align: center;
+  }
+}
+
+.home .footer {
+  z-index: 0;
+  visibility: hidden;
+
+  &.visible {
+    z-index: 500;
+    visibility: visible;
   }
 }

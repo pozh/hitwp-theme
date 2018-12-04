@@ -17,6 +17,10 @@
   color: $white;
   background: $white;
 
+  .home & {
+    height: 800px;
+  }
+
   &__bg {
     position: absolute;
     width: 100%;
