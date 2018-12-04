@@ -17,10 +17,6 @@
   color: $white;
   background: $white;
 
-  .home & {
-    height: 800px;
-  }
-
   &__bg {
     position: absolute;
     width: 100%;
@@ -105,27 +101,9 @@
     text-align: center;
   }
 
-  &__scroll {
-    position: absolute;
-    width: 20px;
-    opacity: .5;
-    bottom: -130px;
-    @include media-breakpoint-down(sm) {
-      display: none;
-    }
-
-    path {
-      fill: #000;
-
-      .evening &,
-      .night & {
-        fill: $white;
-      }
-
-    }
-  }
-
   &_home {
+    height: 800px;
+
     .container {
       min-height: 21rem;
     }
