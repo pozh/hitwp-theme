@@ -36,6 +36,12 @@
 </footer>
 
 <?php wp_footer(); ?>
+<script>
+  var __REPLAIN_ = '5b543727-222c-4a56-b19e-ca0628ea6b33';
+  (function(u){var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=u;
+    var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);
+  })('https://widget.replain.cc/dist/client.js');
+</script>
 
 </body>
 </html>
